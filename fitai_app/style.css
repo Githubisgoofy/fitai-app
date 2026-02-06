@@ -1,0 +1,51 @@
+:root { 
+    --primary: #00ff88; 
+    --bg: #050505; 
+    --glass: rgba(255, 255, 255, 0.05); 
+}
+
+body { 
+    font-family: 'Inter', system-ui, sans-serif; 
+    background: var(--bg); 
+    color: white; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+}
+
+.glass-container { 
+    width: 90%; 
+    max-width: 400px; 
+    background: var(--glass); 
+    backdrop-filter: blur(20px); 
+    border: 1px solid rgba(255,255,255,0.1); 
+    padding: 30px; 
+    border-radius: 30px; 
+}
+
+.logo-placeholder { font-weight: 900; font-size: 2rem; }
+.logo-placeholder span { color: var(--primary); }
+.badge { font-size: 0.6rem; background: var(--primary); color: black; padding: 2px 6px; border-radius: 4px; }
+
+.custom-upload { 
+    display: block; background: white; color: black; padding: 15px; 
+    border-radius: 15px; font-weight: bold; cursor: pointer; text-align: center; 
+}
+
+#upload { display: none; }
+
+.scroll-x { display: flex; overflow-x: auto; gap: 10px; margin-top: 20px; }
+.scroll-x img { width: 80px; height: 80px; border-radius: 12px; object-fit: cover; border: 1px solid var(--primary); }
+
+#analyze-btn { 
+    width: 100%; margin-top: 20px; padding: 15px; border-radius: 15px; 
+    border: 1px solid var(--primary); background: transparent; color: var(--primary); font-weight: bold; 
+}
+
+.score-circle { width: 120px; margin: 0 auto; }
+.circle { fill: none; stroke: var(--primary); stroke-width: 2.8; stroke-linecap: round; transition: stroke-dasharray 1s ease; }
+.circle-bg { fill: none; stroke: #222; stroke-width: 2.8; }
+.percentage { fill: white; font-size: 0.5rem; text-anchor: middle; font-weight: bold; }
+.hidden { display: none; }
