@@ -57,3 +57,15 @@ function updateUI(score, tags) {
     document.getElementById('feedback-text').innerHTML = 
         score > 60 ? '🔥 Neural Match: High Drip Factor' : '🛠️ Incomplete Fit: More Layers Needed';
 }
+function shareApp() {
+    if (navigator.share) {
+        navigator.share({
+            title: 'FitAI Streetwear Stylist',
+            text: 'Check out my drip score on FitAI!',
+            url: window.location.href
+        });
+    } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert('Link copied to clipboard!');
+    }
+}

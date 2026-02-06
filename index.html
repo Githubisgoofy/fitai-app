@@ -14,13 +14,15 @@
         <header>
             <div class='logo-placeholder'>FIT<span>AI</span></div>
             <h1>Vision <span class='badge'>NEURAL</span></h1>
+            <a href="https://githubisgoofy.github.io/fitai-app/" class="live-url">githubisgoofy.github.io/fitai-app/</a>
         </header>
         <main>
-            <div id="loading-overlay">Loading Neural Engine...</div>
+            <div id="loading-overlay">Initializing AI...</div>
             <label for='upload' class='custom-upload'>📸 Scan Fit Pieces</label>
             <input type='file' accept='image/*' id='upload' multiple style="display:none">
             <div id='previews' class='scroll-x'></div>
             <button onclick='analyzeWithAI()' id='analyze-btn'>RUN NEURAL ANALYSIS</button>
+            
             <div id='result' class='hidden'>
                 <div class='score-circle'>
                     <svg viewBox='0 0 36 36' class='circular-chart'>
@@ -30,10 +32,13 @@
                     </svg>
                 </div>
                 <div id='feedback-text'></div>
+                <button onclick="shareApp()" class="share-btn">🔗 Share Fit Link</button>
             </div>
         </main>
+        <footer>
+            <p>© 2026 WinterAG • <a href="https://github.com/Githubisgoofy/fitai-app" style="color:white;opacity:0.5;">Source Code</a></p>
+        </footer>
     </div>
     <script src='app.js'></script>
 </body>
 </html>
-
